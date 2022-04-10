@@ -1,0 +1,13 @@
+json = {
+  id: @micropost.id,
+  content: format_content,
+  created_at: @micropost.created_at,
+  updated_at: @micropost.updated_at,
+  user: {
+    id: @user.id,
+    name: @user.name,
+    uid: @user.uid
+  }
+}
+
+json
