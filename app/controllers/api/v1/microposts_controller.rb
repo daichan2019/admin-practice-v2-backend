@@ -8,7 +8,8 @@ class Api::V1::MicropostsController < ApplicationController
   end
 
   def create
-    micropost = current_user.microposts.create!(micropost_params)
+    @user = current_user
+    @micropost = current_user.microposts.create!(micropost_params)
     render :template => "api/v1/microposts/show.json.jb"
   end
 

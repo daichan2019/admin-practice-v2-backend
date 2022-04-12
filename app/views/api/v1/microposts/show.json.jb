@@ -1,6 +1,5 @@
 json = {
-  id: @micropost.id,
-  content: format_content,
+  content: @micropost.content,
   created_at: @micropost.created_at,
   updated_at: @micropost.updated_at,
   user: {
