@@ -3,8 +3,8 @@ class Api::V1::MicropostsController < ApplicationController
   before_action :authenticate_user, only: %i[create update destroy]
 
   def index
-    microposts = Micropost.includes(:user).order(created_at: :desc)
-    render :template => "api/v1/microposts/show.json.jb"
+    @microposts = Micropost.includes(:user).order(created_at: :desc)
+    render :template => "api/v1/microposts/index.json.jb"
   end
 
   def create

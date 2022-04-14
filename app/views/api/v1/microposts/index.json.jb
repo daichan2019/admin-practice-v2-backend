@@ -1,0 +1,17 @@
+json = {}
+
+json[:microposts] = @microposts.map do |micropost|
+  {
+    id: micropost.id,
+    content: micropost.content,
+    created_at: micropost.created_at,
+    updated_at: micropost.updated_at,
+    user: {
+      id: micropost.user.id,
+      name: micropost.user.name,
+      uid: micropost.user.uid
+    }
+  }
+end
+
+json
