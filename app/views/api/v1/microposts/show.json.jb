@@ -4,9 +4,9 @@ json = {
   created_at: @micropost.created_at,
   updated_at: @micropost.updated_at,
   user: {
-    id: @user.id,
-    name: @user.name,
-    uid: @user.uid
+    id: @_current_user.id,
+    name: @_current_user.name,
+    uid: @_current_user.uid
   }
 }
 
