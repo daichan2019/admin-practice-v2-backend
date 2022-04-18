@@ -44,3 +44,5 @@ gem 'firebase-auth-rails'
 gem 'jb'
 
 gem 'dotenv-rails'
+
+gem 'active_storage_base64'
