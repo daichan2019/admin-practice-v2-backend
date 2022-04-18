@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       namespace 'auth' do
         resources :users, only: %i[create show]
-        namespace :me do
+        namespace :settings do
           resource :account, only: %i[update]
         end
       end
